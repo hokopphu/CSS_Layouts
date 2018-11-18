@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mostly Fluid</title>
+    <style>
+        div {
+            min-height: 100px;
+        }
+
+        h1 {
+            width: 100%;
+        }
+
+        #first {
+            background-color: aqua;
+        }
+
+        #second {
+            background-color: palevioletred;
+        }
+
+        #third {
+            background-color: darkgoldenrod;
+        }
+
+        #fourth {
+            background-color: darkorange;
+        }
+
+        #fifth {
+            background-color: khaki;
+        }
+
+        .box {
+            width: 100%;
+        }
+
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (min-width: 400px) {
+            #second {
+                width: 50%;
+            }
+
+            #third {
+                width: 50%;
+            }
+
+
+        }
+
+        @media screen and (min-width: 550px) {
+            #first{
+                width: 50%;
+            }
+            #second {
+                width: 50%;
+            }
+
+            #third {
+                width: 33%;
+            }
+            #fourth{
+                width: 34%;
+            }
+            #fifth{
+                width: 33%;
+            }
+        }
+        @media screen and (min-width: 700px){
+            #container{
+                min-width: 700px;
+                width:80%;
+                margin:auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <details>
+        <p>***resize the window in order to see the changes***</p>
+        <p>***brakpoints at 400px, 550px, 700px***</p>
+    </details>
+    <div id="container">
+        <h1>Mostly Fluid</h1>
+        <div id="first" class="box">first</div>
+        <div id="second" class="box">second</div>
+        <div id="third" class="box">third</div>
+        <div id="fourth" class="box">fourth</div>
+        <div id="fifth" class="box">fifth</div>
+    </div>
+
+</body>
+
+</html>
