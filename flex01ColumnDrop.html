@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Column Drop</title>
+    <style>
+        div {
+            height: 100px;
+        }
+
+        h1 {
+            width: 100%;
+        }
+
+        #first {
+            background-color: aqua;
+        }
+
+        #second {
+            background-color: palevioletred;
+        }
+
+        #third {
+            background-color: darkgoldenrod;
+        }
+
+        .box {
+            width: 100%;
+        }
+
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (min-width: 400px) {
+            #first {
+                width: 25%;
+            }
+
+            #second {
+                width: 75%;
+            }
+        }
+
+        @media screen and (min-width: 550px) {
+            #second {
+                width: 50%;
+            }
+
+            #third {
+                width: 25%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <details>
+        <p>***resize the window in order to see the changes***</p>
+        <p>***brakpoints at 400px, 550px***</p>
+    </details>
+    <div id="container">
+        <h1>Column Drop</h1>
+        <div id="first" class="box">first</div>
+        <div id="second" class="box">second</div>
+        <div id="third" class="box">third</div>
+    </div>
+
+</body>
+
+</html>
