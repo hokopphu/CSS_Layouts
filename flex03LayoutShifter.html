@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout Shifter</title>
+    <style>
+        .cont {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            min-height: 100px;
+            width: 100%;
+        }
+
+        h1 {
+            width: 100%;
+        }
+
+        #first {
+            background-color: blue;
+        }
+
+        #second {
+            background-color: seagreen;
+        }
+
+        #third {
+            background-color: lawngreen;
+        }
+
+        #fourth {
+            background-color: palevioletred;
+        }
+
+        @media screen and (min-width:500px) {
+            #first {
+                width: 50%
+            }
+
+            #container2 {
+                width: 50%;
+            }
+        }
+
+        @media screen and (min-width:600px) {
+            #first {
+                width: 25%;
+                order: 3;
+            }
+
+            #fourth {
+                width: 25%;
+                order: 1;
+            }
+
+            #container2 {
+                order: 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <details>
+        <p>***resize the window in order to see the changes***</p>
+        <p>***brakpoints at 500px, 600px, 700px***</p>
+        <p>***at 700 the orders are changing***</p>
+        <p>***fourth:1, container2:2, first:3</p>
+    </details>
+    <div id="container1" class="cont">
+        <h1>Layout Shifter</h1>
+        <div id="first" class="box">first</div>
+        <div id="container2" class="cont">
+            <div id="second" class="box">second</div>
+            <div id="third" class="box">third</div>
+        </div>
+        <div id="fourth" class="box">fourth</div>
+    </div>
+
+</body>
+
+</html>
